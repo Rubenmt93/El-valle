@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: rgb(36,36,36);
+    background: linear-gradient(149deg, rgba(36,36,36,1) 0%, rgba(77,77,77,1) 47%, rgba(146,142,142,1) 100%);
+
+    
+}
+.box{
+    width: 90%;
+    margin: auto;
+    background-color: white;   
+    margin-top: 0;         
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    
+}
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}  
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+
+.black{
+  color: rgb(33, 200, 86);;  
+}
+.hover-underline-animation-black {
+  display: inline-block;
+  position: relative;
+  color: rgb(33, 200, 86);;
+  
+}
+.hover-underline-animation-black::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  background-color: rgb(33, 200, 86);;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}  
+.hover-underline-animation-black:hover::after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}

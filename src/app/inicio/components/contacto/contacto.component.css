@@ -1,0 +1,68 @@
+.box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.horario {
+    grid-area: 2 / 1 / 3 / 2;; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:2%;
+}
+.contacto { 
+    grid-area: 2 / 2 / 3 / 3; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:2%;
+}
+h1{
+    margin: auto;
+    font-size: 60px;
+}
+td{
+    font-size: 20px;
+    text-align: center;
+}
+
+.iconaling{
+    display: flex;
+    justify-content: center;
+    text-align:start;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 1fr;
+    grid-column-gap: 0px;
+    grid-template-areas: 
+    ". ."
+    ". ."; 
+}
+    
+.horarioTittle { 
+    grid-area: 1 / 1 / 2 / 2; 
+    margin: auto;
+    padding-top:10px ;
+}
+.contactoTittle {
+    grid-area: 1 / 2 / 2 / 3; 
+    margin: auto;
+    padding-top:10px ;
+}
+table{
+    margin-bottom: 50px;
+}
+mat-icon{
+    color: black;
+}
+.maincontainer{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
