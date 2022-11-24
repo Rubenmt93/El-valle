@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { InicioModule } from './inicio/inicio.module';
 import { SharedModule } from './shared/shared.module';
+import { GaleriaModule } from './galeria/galeria.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     AngularMaterialModule,
     InicioModule,
-    SharedModule
+    SharedModule,
+    GaleriaModule
   ],
   
   
