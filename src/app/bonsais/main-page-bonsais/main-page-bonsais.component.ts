@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page-bonsais.component.css']
 })
 export class MainPageBonsaisComponent implements OnInit {
+    
+  
+  
 
   constructor() { }
 

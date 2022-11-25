@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 interface Item {
   imageSrc:string;
   imageAlt:string;
@@ -17,6 +17,25 @@ export class GalleryLightboxComponent implements OnInit {
   controls:boolean = false
   previewImage:boolean=false
   totalImageCount=0
+  @HostListener('document:keyup', ['$event'])
+    onKeyUp(ev:KeyboardEvent) {
+      // do something meaningful with it
+      
+      if(this.showMask){
+        switch(ev.key){
+          case 'Escape':
+            this.closeImage();
+            break;
+          case "ArrowRight":
+            this.nextImage();
+            break
+          case "ArrowLeft":
+            this.prevImage();
+            break
+
+        }
+      }
+     }
   constructor() { }
 
   ngOnInit(): void {

@@ -4,14 +4,15 @@ import { MainPageBonsaisComponent } from './main-page-bonsais/main-page-bonsais.
 
 
 
+
 @NgModule({
-  declarations: [
-    
+  declarations: [    
   
     MainPageBonsaisComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
   ]
 })
 export class BonsaisModule { }

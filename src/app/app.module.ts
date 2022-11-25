@@ -8,6 +8,7 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { InicioModule } from './inicio/inicio.module';
 import { SharedModule } from './shared/shared.module';
 import { GaleriaModule } from './galeria/galeria.module';
+import { BonsaisModule } from './bonsais/bonsais.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { GaleriaModule } from './galeria/galeria.module';
     AngularMaterialModule,
     InicioModule,
     SharedModule,
-    GaleriaModule
+    GaleriaModule,
+    BonsaisModule
   ],
   
   

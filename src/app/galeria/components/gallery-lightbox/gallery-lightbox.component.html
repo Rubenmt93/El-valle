@@ -1,4 +1,5 @@
 <div class="gallery-lightbox-container">
+  
     <div  class="gallery">
         <div *ngFor="let item of galleryData; let i = index" class="gallery-img">
             <img (click)="onPreviewImage(i)" [src]="item.imageSrc" [alt]="item.imageAlt">

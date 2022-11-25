@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: rgb(36,36,36);
-    background: linear-gradient(149deg, rgba(36,36,36,1) 0%, rgba(77,77,77,1) 47%, rgba(146,142,142,1) 100%);
-
+  background: rgb(36,36,36);
+background: linear-gradient(225deg, rgba(36,36,36,1) 40%, rgba(69,102,69,1) 100%);
     
 }
 .box{
