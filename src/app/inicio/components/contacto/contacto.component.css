@@ -35,34 +35,44 @@ td{
     text-align:start;
 }
 .box{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 0.2fr 1fr;
-    grid-column-gap: 0px;
-    grid-template-areas: 
-    ". ."
-    ". ."; 
+    display: flex;
+    
 }
     
 .horarioTittle { 
-    grid-area: 1 / 1 / 2 / 2; 
+    
     margin: auto;
     padding-top:10px ;
 }
 .contactoTittle {
-    grid-area: 1 / 2 / 2 / 3; 
+   
     margin: auto;
     padding-top:10px ;
 }
 table{
     margin-bottom: 50px;
 }
-mat-icon{
-    color: black;
+
+mat-icon,td{
+    color: white;
 }
-.maincontainer{
-    background-color: white;
-}
+
 a{
     text-decoration: none;
+}
+.contactoBox{
+    background-color: rgb(194, 163, 39);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.horarioBox{
+    background-color: rgb(81, 116, 156);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
 }

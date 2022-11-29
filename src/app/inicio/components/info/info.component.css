@@ -1,13 +1,26 @@
 
  .maincontainer{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    margin:0px;
- }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+    background-color: rgb(29, 169, 87);
+    }
+ .info-foto { 
+    grid-area: 1 / 1 / 2 / 2;     
+    display: inline-block;
+    height: 100%;
+   background-image: url("../../../../assets/juanmontes1.jpg");
+}
+.box{    
+    grid-area: 1 / 2 / 2 / 4;
+}
  .tittlecontainer{
     display: flex;
     justify-content: center;
+    margin-bottom:30px ;
  }
 
 
@@ -20,14 +33,7 @@
   
   
 
-.box{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    
-}
+
 .info-grid { 
     grid-area: 1 / 1 / 2 / 3; 
     display: flex;
@@ -36,17 +42,13 @@
     margin: 50px;
     
 }
-.info-foto { 
-    grid-area: 1 / 3 / 2 / 4; 
-    
-    display: inline-block;
-   
-}
+
 p{
     font-size: 150%;
+    color: white;
 }
 img{
-    border-radius: 10px;
+    
     width:100%;
     
 }

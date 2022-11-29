@@ -1,0 +1,19 @@
+
+.macetas {
+     
+    display: flex;
+    width: 100%;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px
+}
+    .herramientas { grid-area: 1 / 1 / 2 / 2; }
+    .alambres { grid-area: 1 / 2 / 2 / 3; }
+    .vitaminas{ grid-area: 1 / 3 / 2 / 4 }
+    .fitosanitario { grid-area: 1 / 1 / 2 / 2; }
+    .tierras { grid-area: 1 / 2 / 2 / 3; }
+    .abonos { grid-area: 1 / 3 / 2 / 4 }

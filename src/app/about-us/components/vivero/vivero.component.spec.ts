@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainPageProductosComponent } from './main-page-productos.component';
+import { ViveroComponent } from './vivero.component';
 
-describe('MainPageProductosComponent', () => {
-  let component: MainPageProductosComponent;
-  let fixture: ComponentFixture<MainPageProductosComponent>;
+describe('ViveroComponent', () => {
+  let component: ViveroComponent;
+  let fixture: ComponentFixture<ViveroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainPageProductosComponent ]
+      declarations: [ ViveroComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainPageProductosComponent);
+    fixture = TestBed.createComponent(ViveroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

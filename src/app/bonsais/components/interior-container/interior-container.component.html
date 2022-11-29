@@ -1,0 +1,23 @@
+
+<div class="exterior"> 
+    <div class="carrousel-container">
+        
+        <div class="interiorInfo">            
+            <h1 class="hover-underline-animation " >Bonsais de interior</h1>
+            <div class="infoCarrousel"></div>
+            <p>
+               Todos los árboles, como puede suponerse, son de exterior. Sin embargo, llamamos Bonsái de interior a aquellos que permiten su cultivo con unas exigencias
+                menores de luz y una mayor temperatura que la que recibiría en el exterior. Aún así, es conveniente que los árboles de interior no estén a más de 50 
+                centímetros aproximadamente, de la luz de una ventana con cristal transparente.
+            </p>
+            <carousel class="carousel" [cellWidth]=300 >
+                <div *ngFor="let item of images; let i = index" class="carousel-cell">
+                    <img [src]= item.imageSrc [title]="item.imageAlt">                   
+                </div>
+            </carousel>              
+        </div>        
+        <div class="imgInterior">            
+        </div>
+    </div>  
+</div>
+   

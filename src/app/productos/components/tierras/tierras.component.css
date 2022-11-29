@@ -1,0 +1,32 @@
+section{
+    background-color: rgb(94, 226, 171);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+.tittlecontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img{
+    width: 100%;
+    height: 200px;
+    background-image: url("../../../../assets/tierras.jpg");
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%; /*Firefox 3.6*/
+    -o-background-size: 100% 100%; /*opera*/
+    -webkit-background-size: 100% 100%; /*Safari*/
+    background-size: 100% 100%; /*estandar css3*/
+
+}
+h1{
+    text-align: center;    
+    font-size: 50px; 
+    margin-top:10px;
+    
+ }
+  p{
+    color: white;
+ }
