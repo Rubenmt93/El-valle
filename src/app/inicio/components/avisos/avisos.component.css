@@ -1,0 +1,21 @@
+section{
+    margin-top: 20px;
+}
+.aviso{
+    width: 80%;
+    background-color: white;
+    border-radius: 50px;
+    padding:1%;
+    margin:auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 100px;
+    margin-left: 50px;
+}
+p{
+    font-size: 150%;
+    margin: auto;
+}

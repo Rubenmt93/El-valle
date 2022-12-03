@@ -12,25 +12,28 @@
     grid-area: 1 / 1 / 2 / 2;     
     display: inline-block;
     height: 100%;
-   background-image: url("../../../../assets/juanmontes1.jpg");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/centrobonsaielvalle-cff2a.appspot.com/o/FotosFijas%2Finicio-quienessomos.jpg?alt=media&token=");      
+    background-repeat: no-repeat;    
+    -moz-background-size: 100% 100%; /*Firefox 3.6*/
+    -o-background-size: 100% 100%; /*opera*/
+    -webkit-background-size: 100% 100%; /*Safari*/
+    background-size: 100% 100%; /*estandar css3*/  
 }
 .box{    
     grid-area: 1 / 2 / 2 / 4;
 }
- .tittlecontainer{
+.tittlecontainer{
     display: flex;
     justify-content: center;
     margin-bottom:30px ;
- }
+}
 
 
-  h1{
+h1{
     text-align: center;    
     font-size: 60px; 
     margin-top:20px;
-    
- }
-  
+}  
   
 
 

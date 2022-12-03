@@ -9,5 +9,7 @@
     <span class="hover-underline-animation" ><a routerLink='/servicios'> Servicios  </a></span>  
     <span class="hover-underline-animation" ><a routerLink='/galeria'> Galeria  </a></span>  
     <span class="hover-underline-animation" ><a routerLink='/sobreNosotros'> Sobre Nosotros  </a></span>  
-
+    <span class="hover-underline-animation" ><a routerLink='/login'> Login  </a></span>  
+    <span   class="hover-underline-animation" ><a routerLink='/avisos'> Avisos  </a></span> 
+    <span  *ngIf="logged" class="hover-underline-animation" ><a (click)="logout()" href="#"> Cerrar Sesion  </a></span>  
  </mat-toolbar> 

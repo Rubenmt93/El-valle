@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageAboutUsComponent } from './main-page-about-us/main-page-about-us.component';
 import { ViveroComponent } from './components/vivero/vivero.component';
 import { JuanComponent } from './components/juan/juan.component';
-
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { JuanComponent } from './components/juan/juan.component';
     JuanComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IvyCarouselModule
   ]
 })
 export class AboutUsModule { }

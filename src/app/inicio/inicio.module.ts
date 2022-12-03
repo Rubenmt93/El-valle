@@ -7,6 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { SharedModule } from '../shared/shared.module';
+import { AvisosComponent } from './components/avisos/avisos.component';
 
 
 
@@ -19,6 +20,7 @@ import { SharedModule } from '../shared/shared.module';
     MapComponent,
     MainPageComponent,
     ContactoComponent,
+    AvisosComponent,
   ],
   imports: [
     CommonModule,

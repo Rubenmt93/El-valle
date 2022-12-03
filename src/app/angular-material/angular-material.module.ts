@@ -5,6 +5,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatSelectModule} from '@angular/material/select';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [],
@@ -15,6 +18,10 @@ import {MatListModule} from '@angular/material/list';
     MatListModule,   
     MatSelectModule,
     MatToolbarModule,  
+    MatInputModule,
+    MatButtonModule,
+
+
       
   ],
  

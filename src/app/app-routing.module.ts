@@ -6,6 +6,11 @@ import { MainPageProductosComponent } from './productos/main-page-productos/main
 import { MainPageServiciosComponent } from './servicios/main-page-servicios/main-page-servicios.component';
 import { MainPageGaleriaComponent } from './galeria/main-page-galeria/main-page-galeria.component';
 import { MainPageAboutUsComponent } from './about-us/main-page-about-us/main-page-about-us.component';
+import { MainpageLoginComponent } from './login/mainpage-login/mainpage-login.component';
+import { MainPageAvisoComponent } from './avisos/main-page-aviso/main-page-aviso.component';
+import { AuthGuard } from './guard/auth.guard';
+
+
 
 const routes: Routes = [
    
@@ -33,6 +38,17 @@ const routes: Routes = [
     path: 'sobreNosotros',
     component: MainPageAboutUsComponent
   },
+  {
+    path: 'login',
+    component: MainpageLoginComponent
+  },
+  {
+    path: 'avisos',
+    component: MainPageAvisoComponent,
+    canLoad:[AuthGuard],
+    canActivate:[AuthGuard],
+  },
+ 
   {
     path:"**",
     redirectTo:"inicio"

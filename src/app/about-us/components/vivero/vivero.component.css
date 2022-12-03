@@ -1,0 +1,36 @@
+.carrouselContainer{
+    width: 20%; 
+}
+.aboutUs-Vivero-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+}
+.infoContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+section{
+    width: 100%;
+    background-color: rgb(41, 168, 70);
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    
+}
+h1{
+    font-size: 60px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+p{
+    color: white;
+    font-size: 180%;
+}
+.carousel{
+    height: 300px !important;
+    margin-left: 10px;
+}

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +12,11 @@ import { BonsaisModule } from './bonsais/bonsais.module';
 import { ServiciosModule } from './servicios/servicios.module';
 import { ProductosModule } from './productos/productos.module';
 import { AboutUsModule } from './about-us/about-us.module';
-
+import { LoginModule } from './login/login.module';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AvisosModule } from './avisos/avisos.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,16 @@ import { AboutUsModule } from './about-us/about-us.module';
     BonsaisModule,
     ServiciosModule,
     ProductosModule,
-    AboutUsModule
+    AboutUsModule,
+    HammerModule,
+    LoginModule,
+    AvisosModule,
+    
+   AngularFireModule.initializeApp(environment.firebaseConfig),
+   AngularFireAuthModule
+
+   
+
   ],
   
   

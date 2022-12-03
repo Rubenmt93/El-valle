@@ -12,9 +12,9 @@
     grid-area: 1 / 1 / 2 / 2;     
     display: inline-block;
     height: 100%;
-    background-image: url("../../../../assets/clinica.jpeg");   
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/centrobonsaielvalle-cff2a.appspot.com/o/FotosFijas%2Fservicios-clinica.jpeg?alt=media&token=");   
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
+    
     -moz-background-size: 100% 100%; /*Firefox 3.6*/
     -o-background-size: 100% 100%; /*opera*/
     -webkit-background-size: 100% 100%; /*Safari*/
