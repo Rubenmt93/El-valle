@@ -19,3 +19,11 @@ h1{
 .maincontainer{
     background-color: rgb(5, 122, 83);
 }
+
+button{
+    background-color: rgb(51, 224, 71);
+    color: white;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 60px;
+}

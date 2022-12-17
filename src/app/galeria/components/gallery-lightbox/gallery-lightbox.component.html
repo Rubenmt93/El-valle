@@ -2,7 +2,7 @@
   
     <div  class="gallery">
         <div *ngFor="let item of galleryData; let i = index" class="gallery-img">
-            <img (click)="onPreviewImage(i)" [src]="item.imageSrc" [alt]="item.imageAlt">
+            <img (click)="onPreviewImage(i)" [src]="item.img" [alt]="item.description">
         </div>
     </div>
     <div *ngIf="showMask" class="lightbox">
@@ -20,7 +20,7 @@
             
             
             <div *ngIf="previewImage" class="lightbox-img">
-                <img [src]="currentLightboxImage.imageSrc" [alt]="currentLightboxImage.imageAlt">
+                <img  class="imageLightbox" [src]="currentLightboxImage.img" [alt]="currentLightboxImage.description">
             </div>
             <div class="moveIconContainer">
                 <mat-icon class="moveIcon" (click)="nextImage()" > navigate_next</mat-icon>
@@ -30,7 +30,8 @@
            
         </div>
         <div class="Imageinfo">
-            <span  class="count">{{currentLightboxImage.imageAlt}}</span>       
+            <span  class="count">{{this.currentLightboxImage.description}}</span>       
+
            
             
         </div>
@@ -39,4 +40,4 @@
 
     </div>
 </div>
- 
+    

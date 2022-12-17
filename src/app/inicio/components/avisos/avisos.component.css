@@ -19,3 +19,16 @@ p{
     font-size: 150%;
     margin: auto;
 }
+
+@media (max-width: 600px){
+   
+    img{
+        width: 50px;
+        margin-left: 25px;
+        margin-right: 20px;
+    } 
+    p{
+        font-size: 100%;
+        margin: auto;
+    }
+}

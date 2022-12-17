@@ -40,7 +40,7 @@ carousel{
 }
 h1{
     margin: auto;
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 30px;
 }
 p{
@@ -49,4 +49,26 @@ p{
     font-size: 25px;
     margin-bottom: 60px;
     color: white;
+    line-height: 25px;
+}
+@media (max-width:700px){
+
+    h1{
+        text-align: center;    
+        font-size: 30px; 
+        margin-top:10px;
+        
+    }
+    .carrousel-container{
+        display: flex;
+        flex-direction: column-reverse;        
+        
+    } 
+    .imgInterior{
+    
+        width:100%;
+        height: 200px;   
+    }
+      
+    
 }

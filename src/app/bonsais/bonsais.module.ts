@@ -6,7 +6,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { SharedModule } from '../shared/shared.module';
 import { InteriorContainerComponent } from './components/interior-container/interior-container.component';
 
-
+import {  TranslateModule } from '@ngx-translate/core';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { InteriorContainerComponent } from './components/interior-container/inte
   imports: [
     CommonModule,
     IvyCarouselModule,
-    SharedModule
+    SharedModule,
+    TranslateModule,
+    HttpClientModule
     
   ]
 })

@@ -1,4 +1,5 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Image } from '../../../interfaces/image';
 interface Item {
   imageSrc:string;
   imageAlt:string;
@@ -9,10 +10,10 @@ interface Item {
   styleUrls: ['./gallery-lightbox.component.css']
 })
 export class GalleryLightboxComponent implements OnInit {
-  @Input() galleryData: Item[] = []
+  @Input() galleryData: Image[] = []
   @Input() showCount = false
   showMask:boolean= false
-  currentLightboxImage: Item = this.galleryData[0]
+  currentLightboxImage: Image = this.galleryData[0]
   currentIndex=0
   controls:boolean = false
   previewImage:boolean=false
@@ -41,6 +42,14 @@ export class GalleryLightboxComponent implements OnInit {
   ngOnInit(): void {
     this.totalImageCount= this.galleryData.length
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    //Add '${implements OnChanges}' to the class.
+    console.log('HE CAMBIADO');
+    this.totalImageCount= this.galleryData.length
+
+  }
   onPreviewImage(index: number):void{
     this.showMask=true
     this.previewImage=true
@@ -50,8 +59,7 @@ export class GalleryLightboxComponent implements OnInit {
 
   }
   closeImage(){
-    this.previewImage=false
-
+    this.previewImage=false 
     this.showMask=false
     this.controls=false
     this.currentIndex=0
@@ -65,6 +73,8 @@ export class GalleryLightboxComponent implements OnInit {
       this.currentIndex++
       this.currentLightboxImage = this.galleryData[this.currentIndex]
      }
+     console.log(this.currentLightboxImage.description);
+     
     }
   prevImage(){
     if(this.currentIndex === 0){

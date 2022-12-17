@@ -5,7 +5,9 @@ import { EscuelaComponent } from './components/escuela/escuela.component';
 import { ClinicaComponent } from './components/clinica/clinica.component';
 import { AsesoramientoComponent } from './components/asesoramiento/asesoramiento.component';
 import { GuarderiaComponent } from './components/guarderia/guarderia.component';
-
+import { TalleresComponent } from './components/talleres/talleres.component';
+import {  TranslateModule } from '@ngx-translate/core';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,10 +16,13 @@ import { GuarderiaComponent } from './components/guarderia/guarderia.component';
     EscuelaComponent,
     ClinicaComponent,
     AsesoramientoComponent,
-    GuarderiaComponent
+    GuarderiaComponent,
+    TalleresComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule,
+    HttpClientModule
   ]
 })
 export class ServiciosModule { }

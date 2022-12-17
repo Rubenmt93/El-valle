@@ -10,7 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { AvisosComponent } from './components/avisos/avisos.component';
 
 
-
+import {  TranslateModule } from '@ngx-translate/core';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,10 @@ import { AvisosComponent } from './components/avisos/avisos.component';
   imports: [
     CommonModule,
     AngularMaterialModule,    
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    TranslateModule
+
     
   ],
   exports: []

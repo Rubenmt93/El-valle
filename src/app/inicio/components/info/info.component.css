@@ -33,6 +33,7 @@ h1{
     text-align: center;    
     font-size: 60px; 
     margin-top:20px;
+    line-height: 60px;
 }  
   
 
@@ -54,4 +55,15 @@ img{
     
     width:100%;
     
+}
+@media (max-width: 900px){
+    .maincontainer{
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    .info-foto { 
+       
+        height: 400px;
+    }
 }

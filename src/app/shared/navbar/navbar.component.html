@@ -1,15 +1,52 @@
 <mat-toolbar> 
-    <div><a  class="iniciospan" routerLink='/inicio'>  
-        <img src="../../../assets/logo_blanco.svg"> 
-        <span class="hover-underline-animation">
-            Inicio
-        </span> </a></div>  
-    <span class="hover-underline-animation" ><a routerLink='/bonsais'> Bonsais  </a></span>  
-    <span class="hover-underline-animation" ><a routerLink='/productos'> Productos  </a></span>  
-    <span class="hover-underline-animation" ><a routerLink='/servicios'> Servicios  </a></span>  
-    <span class="hover-underline-animation" ><a routerLink='/galeria'> Galeria  </a></span>  
-    <span class="hover-underline-animation" ><a routerLink='/sobreNosotros'> Sobre Nosotros  </a></span>  
-    <span class="hover-underline-animation" ><a routerLink='/login'> Login  </a></span>  
-    <span   class="hover-underline-animation" ><a routerLink='/avisos'> Avisos  </a></span> 
-    <span  *ngIf="logged" class="hover-underline-animation" ><a (click)="logout()" href="#"> Cerrar Sesion  </a></span>  
+    
+    <div class="fullWidth" *ngIf="fullwidth,  else mobileNavbar">
+        <div>
+            <a  class="iniciospan" routerLink='/inicio'>          
+                <img src="../../../assets/logo_blanco.svg"> 
+                <span class="hover-underline-animation">
+                    {{ 'Inicio' | translate }}
+                </span> 
+            </a>
+        </div> 
+        <span class="hover-underline-animation" ><a routerLink='/bonsais'> {{ 'Bonsais' | translate }}  </a></span>  
+        <span class="hover-underline-animation" ><a routerLink='/productos'> {{ 'Productos' | translate }}  </a></span>  
+        <span class="hover-underline-animation" ><a routerLink='/servicios'> {{ 'Servicios' | translate }}  </a></span>  
+        <span class="hover-underline-animation" ><a routerLink='/galeria'> {{ 'Galeria' | translate }}  </a></span>  
+        <span class="hover-underline-animation" ><a routerLink='/sobreNosotros'> {{ 'SobreNosotros' | translate }}  </a></span>     
+        <span  *ngIf="logged" class="hover-underline-animation" ><a routerLink='/admin/avisos'> Panel Administrador  </a></span> 
+    </div>
+    <ng-template #mobileNavbar>
+     
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+        <div>
+            <a  class="iniciospan" routerLink='/inicio'>          
+                <img src="../../../assets/logo_blanco.svg"> 
+                <span class="hover-underline-animation">
+                    {{ 'Inicio' | translate }}
+                </span> 
+            </a>
+        </div>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item><a routerLink='/bonsais'> {{ 'Bonsais' | translate }}  </a></button>
+            <button mat-menu-item><a routerLink='/productos'> {{ 'Productos' | translate }}  </a></button>
+            <button mat-menu-item><a routerLink='/servicios'> {{ 'Servicios' | translate }} </a></button>
+            <button mat-menu-item><a routerLink='/galeria'> {{ 'Galeria' | translate }}    </a></button>
+            <button mat-menu-item><a routerLink='/sobreNosotros'> {{ 'SobreNosotros' | translate }}  </a></button>
+            <button  *ngIf="logged" mat-menu-item ><a routerLink='/admin/avisos'> Panel Administrador  </a></button> 
+            </mat-menu>
+    </ng-template>
+        
+    <span>
+        <div *ngIf="this.translate.currentLang==='en'" 
+                (click)="switchLang('es')" 
+                class="bandera ingles">
+                
+        </div>
+        <div *ngIf="this.translate.currentLang==='es' || this.translate.currentLang===undefined "
+                (click)="switchLang('en')"
+                class="bandera español">
+                
+        </div>
+    </span>
  </mat-toolbar> 

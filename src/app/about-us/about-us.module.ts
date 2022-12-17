@@ -5,7 +5,8 @@ import { ViveroComponent } from './components/vivero/vivero.component';
 import { JuanComponent } from './components/juan/juan.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
-
+import {  TranslateModule } from '@ngx-translate/core';
+import {  HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MainPageAboutUsComponent,
@@ -14,7 +15,9 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   ],
   imports: [
     CommonModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    TranslateModule,
+    HttpClientModule
   ]
 })
 export class AboutUsModule { }

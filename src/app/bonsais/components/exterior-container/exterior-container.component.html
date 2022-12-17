@@ -12,17 +12,14 @@
             </div>
             <div class="interiorInfo">
                 
-                <h1 class="hover-underline-animation " >Bonsais de Exterior</h1>
+                <h1 class="hover-underline-animation " >{{'Bonsais de Exterior' | translate}}</h1>
                 <div class="infoCarrousel"></div>
-                <p>
-                    Llamamos bonsái de exterior a aquellos árboles que por sus necesidades de luz y temperatura no se pueden cultivar en el interior. 
-                    Aún así, se ha de controlar la luz con una malla de sombreado para evitar que el exceso de Sol pueda perjudicar su salud.
-                     Los Bonsais de exterior pueden ser de zonas frías o templadas. La mayor parte de los bonsái de flor y fruta necesitan estar en el exterior
-                         para poder realizar su función reproductora (flor y fruto).
-                </p>
+                <p>{{'Bonsais de Exterior Texto1' | translate}}</p>
+                <p>{{'Bonsais de Exterior Texto2' | translate}}</p>
+                <p>{{'Bonsais de Exterior Texto3' | translate}}</p>
                 <carousel class="carousel" [cellWidth]=300 >
                     <div *ngFor="let item of images; let i = index" class="carousel-cell">
-                        <img [src]= item.imageSrc [title]="item.imageAlt">
+                        <img [src]= item.img [title]="item.texto">
                        
                     </div>
                 </carousel>

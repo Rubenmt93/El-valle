@@ -1,9 +1,9 @@
 section{
     background-color: rgb(86, 194, 37);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;    
     padding: 5%;
+    height: 100%;
 }
 .tittlecontainer{
     width: 100%;
@@ -25,8 +25,24 @@ h1{
     text-align: center;    
     font-size: 50px; 
     margin-top:10px;
+    margin-bottom: 50px;
     
  }
  p{
     color: white;
+    font-size: 20px;
+    margin-bottom: 70px;
  }
+ @media (max-width:900px){
+    h1{
+        text-align: center;    
+        font-size: 40px; 
+        margin-top:10px;
+        
+    }
+}
+@media (max-width:550px){
+    h1{           
+        font-size: 30px;             
+    }
+}

@@ -7,8 +7,11 @@ import { MainPageServiciosComponent } from './servicios/main-page-servicios/main
 import { MainPageGaleriaComponent } from './galeria/main-page-galeria/main-page-galeria.component';
 import { MainPageAboutUsComponent } from './about-us/main-page-about-us/main-page-about-us.component';
 import { MainpageLoginComponent } from './login/mainpage-login/mainpage-login.component';
-import { MainPageAvisoComponent } from './avisos/main-page-aviso/main-page-aviso.component';
 import { AuthGuard } from './guard/auth.guard';
+import { MainPageAdminComponent } from './admin/main-page-admin/main-page-admin.component';
+import { GaleriaComponent } from './admin/components/galeria/galeria.component';
+import { AvisosComponent } from './admin/components/avisos/avisos.component';
+import { SubirImagenComponent } from './admin/components/subir-imagen/subir-imagen.component';
 
 
 
@@ -43,10 +46,26 @@ const routes: Routes = [
     component: MainpageLoginComponent
   },
   {
-    path: 'avisos',
-    component: MainPageAvisoComponent,
+    path: 'admin',
+    component: MainPageAdminComponent,
     canLoad:[AuthGuard],
     canActivate:[AuthGuard],
+    children:[
+      {
+        path:'avisos',
+        component:AvisosComponent,
+      },
+      {
+        path:'galeria',
+        component:GaleriaComponent,
+      },
+      {
+        path:'subirImagen',
+        component:SubirImagenComponent,
+      },
+     
+
+    ],
   },
  
   {

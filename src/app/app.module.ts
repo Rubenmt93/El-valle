@@ -16,8 +16,10 @@ import { LoginModule } from './login/login.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AvisosModule } from './avisos/avisos.module';
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +40,20 @@ import { AvisosModule } from './avisos/avisos.module';
     AboutUsModule,
     HammerModule,
     LoginModule,
-    AvisosModule,
+    AdminModule,
+  
     
-   AngularFireModule.initializeApp(environment.firebaseConfig),
-   AngularFireAuthModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
 
    
 
@@ -52,3 +64,8 @@ import { AvisosModule } from './avisos/avisos.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// AOT compilation support
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

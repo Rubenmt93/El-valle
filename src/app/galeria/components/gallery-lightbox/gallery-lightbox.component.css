@@ -6,11 +6,16 @@
     padding-top: 0;
 }
 .gallery{
-    max-width: 100%;
+    /* max-width: 100%;
     display: grid;       
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin: 20px;
+    margin: 20px; */
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
 }
 .gallery-img{ 
   min-width: 100%;
@@ -38,7 +43,11 @@ img{
     height: 100%;
     background-color: rgba(0,0,0,0.85);
     
+}
 
+.imageLightbox{
+    max-width: 600px;
+    max-height: 600px;
 }
 
 .spanAndClose{
@@ -73,3 +82,12 @@ mat-icon:hover{
 .pre{
     margin-right: 15px;
 }
+@media (max-width:800px){
+
+    
+    .imageLightbox{
+        max-width: 250px;
+    }
+    
+}
+  
